@@ -1,0 +1,47 @@
+@tailwind base;
+@layer base {
+  * {
+    font-family: 'Lato', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+}
+
+@tailwind components;
+@layer components {
+  .tri-left::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 18px;
+    right: auto;
+    top: -15px;
+    bottom: auto;
+    border: 15px solid;
+    border-color: transparent transparent transparent #e5e7eb;
+  }
+  .tri-right::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 18px;
+    left: auto;
+    top: -15px;
+    bottom: auto;
+    border: 15px solid;
+    border-color: transparent #e5e7eb transparent transparent;
+  }
+}
+
+@tailwind utilities;
